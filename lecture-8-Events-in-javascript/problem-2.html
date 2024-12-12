@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+      accusamus quasi possimus at sint illum. Nihil, dolor sint cumque ipsam
+      laudantium autem facere? Accusantium nemo suscipit obcaecati, alias illum
+      dolorem.
+    </p>
+    <button id="btn">Hide Paragraph</button>
+    <script>
+      const hideBtn = document.getElementById("btn");
+      const textContent = document.querySelector(".content");
+
+      let isToggle = false;
+
+      hideBtn.addEventListener("click", () => {
+        if (isToggle) {
+          textContent.style.display = "none";
+
+          hideBtn.innerText = "Display Paragraph";
+        } else {
+          textContent.style.display = "block";
+          hideBtn.innerText = "Hide Paragraph";
+        }
+        isToggle = !isToggle;
+      });
+    </script>
+  </body>
+</html>
