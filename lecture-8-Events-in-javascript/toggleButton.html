@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="toggleText">Click Below Button to Increase Font Size</p>
+    <button id="toggleBtn">Click Me</button>
+    <script>
+        const toggleText = document.querySelector('.toggleText');
+        const toggleBtn = document.getElementById('toggleBtn');
+
+        let isToggle = false;
+
+        toggleBtn.addEventListener('click', ()=>{
+            if(isToggle){
+                toggleText.style.fontSize = '16px'
+                isToggle = false;
+            }else{
+                toggleText.style.fontSize = '24px';
+                isToggle =   true;
+            }
+        })
+    </script>
+</body>
+</html>
